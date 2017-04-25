@@ -1,0 +1,28 @@
+What happens when you initialize a repository? Why do you need to do it?
+	
+	A hidden dir .git is being created when I initialize a repository.
+	To let GIT to make an meta snapshots from the files of the diroctory.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+	
+	staging area is an intermidiate location for files, which are prepared to bo commited
+	working directory contains all files tracked and untracked by GIT
+	using 'git add' command we add untracked files from the working directory to the staging area.
+	Repository is a collection of snapshoots of files stages.
+	
+How can you use the staging area to make sure you have one commit per logical change? 
+
+ 	I can add several files which have to be commited, and that makes sense for logical change
+
+ What are some situations when branches would be helpful in keeping your history organized? How would branches help?
+
+ 	We should create branches when we want to add experimental code, change language version. It is possible later to marge two branches togather.
+
+ How do the diagrams help you visualize the branch structure?
+
+ 	Diagrams show that every commit has his parent commit. The head detach occures when I get few commits back and make a new commit, these few commits are deteched. To avoid this i need to make a new branch in this situation. git branch -b new_branch
+
+What are the pros and cons of Git's automatic merging vs always doing merges manually?
+
+	pros: convienience, safe time
+	cons: it can't merge automaticly everything, when lines were changed in both branches it turns to user to accept the final choise
